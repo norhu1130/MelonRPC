@@ -1,5 +1,6 @@
 <h1 align="center">
   멜론 RPC - 자신이 무엇을 듣는지 뿜내보세요!
+  <img src="./img/example.png">
 </h1>
 
 # 정보
