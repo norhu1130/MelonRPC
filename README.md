@@ -1,5 +1,5 @@
+<img src="./img/example.png"><br>
 <h1 align="center">
-  <img src="./img/example.png"><br>
   멜론 RPC - 자신이 무엇을 듣는지 뿜내보세요!
 </h1>
 
