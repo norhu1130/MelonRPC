@@ -96,22 +96,18 @@ while True:
 
     split = title.split(" - ")
 
-    song = split[0]
     try:
-        # Seven (feat. Latto) - Clean ver - 정국 같은 경우, Clean ver이 아티스트가 되기에 이렇게 처리.
-        for i in range(0,100):
-            artist = split[i]
-    except:
-        pass
-    if song is None and artist is None:
-        error("Failed to get song info. Are you closed Melon Player?")
-        continue
-    info(f"Playing {song} - {artist}")
+        song = " - ".join(split[:-1])
+        artist = split[-1]
 
-    rpc.set_activity(
-        state=f"{artist}",
-        details=song,
-        large_image="melon",
-        large_text="멜론 PC 플레이어",
-        timestamp=time.mktime(time.localtime())
-    )
+        info(f"Playing {song} - {artist}")
+
+        rpc.set_activity(
+            state=f"{artist}",
+            details=song,
+            large_image="melon",
+            large_text="멜론 PC 플레이어",
+            timestamp=time.mktime(time.localtime())
+        )
+    except:
+        error("Failed to get song info. Are you closed Melon Player?")
